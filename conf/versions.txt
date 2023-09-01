@@ -1,0 +1,19 @@
+This file contains descriptions for the rank_bound_version parameter in the global_settings.py file. The purpose of this parameter name is to keep track of the various metrics we are using to evaluate the rank bound at different points in time.
+
+A0: This analyzes rank_bound_A, which is defined as ||grad L(f(w))||/(||W^k||) where grad L(f(w)) is the average gradient of the non-regularized loss across all mini-batches.
+
+B0: This has no analysis of rank bound but represents the first implementation of weight norm in mlp_wn.
+
+B1: This is a debug build where we apply weight decay to ALL LAYERS (rather than only last) to try and see what is preventing weight norm from converging at all.
+
+B2: This is a debug build where we enable grad for the "g" parameter in weight norm. We go back to only applying weight decay to the last layer.
+
+B3: This implements an analysis of weight norm where weight decay is applied to all layers, and the grad paramater is also enabled for all layers. The rank bound is defined as min_batch ||grad_{Vi} L(f_w)|| * ||Vi|| / | (1/B) * sum_{j} (<dloss_j/df_j, f_j>) |
+
+B4: This implements an analysis of weight norm where weight decay is only applied on the last layer and grad is enabled for all layers. The rank bound is that of B3.
+
+C0: This uses the same architecture as before (weight norm, weight decay on last layer) with the rank bound ||grad_{Vk} L||*||Vk||/(|g_k grad_{gk} L|). Note: results from these experiments were deleted since training was taking too long and preliminary analysis showed a large bound.
+
+BC0: This implements an analysis of weight norm where weight decay is applied to all layers and we measure both rank bound bound B and rank bound C.
+
+D0: We analyze the frobenius norm of weight matrices.
