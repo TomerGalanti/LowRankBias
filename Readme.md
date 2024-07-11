@@ -1,3 +1,5 @@
+# SGD and Weight Decay Provably Induce a Low-Rank Bias in Deep Neural Networks
+
 ## Requirements
 - Python 3.10
 - Pytorch 1.11
