@@ -1,5 +1,3 @@
-# Project Name
-
 ## Requirements
 - Python 3.10
 - Pytorch 1.11
