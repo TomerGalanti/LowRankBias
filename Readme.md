@@ -1,4 +1,4 @@
-# SGD and Weight Decay Provably Induce a Low-Rank Bias in Deep Neural Networks
+# Characterizing the Implicit Bias of Regularized SGD in Rank Minimization
 
 ## Requirements
 - Python 3.10
@@ -51,3 +51,17 @@ Other Files
 * analysis_rank.py: Contains functions that help in measuring the ranks of the various matrices in the network.
 * utils.py: Contains functions responsible for saving data, loading datasets, etc.
 * models: Contains implementations of networks used in training.
+
+## Reference
+If you found this code useful, please cite the following paper:
+```
+@misc{galanti2023characterizingimplicitbiasregularized,
+      title={Characterizing the Implicit Bias of Regularized SGD in Rank Minimization}, 
+      author={Tomer Galanti and Zachary S. Siegel and Aparna Gupte and Tomaso Poggio},
+      year={2023},
+      eprint={2206.05794},
+      archivePrefix={arXiv},
+      primaryClass={cs.LG},
+      url={https://arxiv.org/abs/2206.05794}, 
+}
+```
