@@ -56,9 +56,9 @@ Other Files
 If you found this code useful, please cite the following paper:
 ```
 @misc{galanti2023characterizingimplicitbiasregularized,
-      title={Characterizing the Implicit Bias of Regularized SGD in Rank Minimization}, 
+      title={SGD and Weight Decay Secretly Compress Your Neural Network}, 
       author={Tomer Galanti and Zachary S. Siegel and Aparna Gupte and Tomaso Poggio},
-      year={2023},
+      year={2024},
       eprint={2206.05794},
       archivePrefix={arXiv},
       primaryClass={cs.LG},
