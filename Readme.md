@@ -1,4 +1,4 @@
-# Characterizing the Implicit Bias of Regularized SGD in Rank Minimization
+# SGD and Weight Decay Secretly Compress Your Neural Network
 
 ## Requirements
 - Python 3.10
